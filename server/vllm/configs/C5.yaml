@@ -1,0 +1,18 @@
+# C5: FP8 KV Cache Quantization
+# Comparison: Measures impact of quantized KV cache on memory and performance
+
+name: C5
+description: "vLLM with FP8 KV cache quantization (--kv-cache-dtype fp8)"
+
+model_id: "mistralai/Mistral-7B-Instruct-v0.3"
+served_model_name: "mistral7b"
+max_model_len: 8192
+gpu_memory_utilization: 0.90
+
+extra_args:
+  - "--kv-cache-dtype"
+  - "fp8"
+
+env:
+  HUGGING_FACE_HUB_DISABLE_TELEMETRY: "1"
+

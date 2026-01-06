@@ -1,0 +1,18 @@
+# C4: Increased Max Sequences
+# Comparison: Measures impact of higher batch size on throughput
+
+name: C4
+description: "vLLM with increased max sequences (--max-num-seqs 512)"
+
+model_id: "mistralai/Mistral-7B-Instruct-v0.3"
+served_model_name: "mistral7b"
+max_model_len: 8192
+gpu_memory_utilization: 0.90
+
+extra_args:
+  - "--max-num-seqs"
+  - "512"
+
+env:
+  HUGGING_FACE_HUB_DISABLE_TELEMETRY: "1"
+

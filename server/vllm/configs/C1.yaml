@@ -1,0 +1,17 @@
+# C1: Baseline vLLM (default settings)
+# Comparison: This is the baseline configuration for all comparisons
+
+name: C1
+description: "Baseline vLLM with default settings"
+
+model_id: "mistralai/Mistral-7B-Instruct-v0.3"
+served_model_name: "mistral7b"
+max_model_len: 8192
+gpu_memory_utilization: 0.90
+
+# No additional flags - uses vLLM defaults
+extra_args: []
+
+env:
+  HUGGING_FACE_HUB_DISABLE_TELEMETRY: "1"
+

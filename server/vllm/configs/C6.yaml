@@ -1,0 +1,18 @@
+# C6: Memory Offload (Swap Space)
+# Comparison: Measures impact of CPU memory offloading
+
+name: C6
+description: "vLLM with swap space enabled (--swap-space 16 GiB)"
+
+model_id: "mistralai/Mistral-7B-Instruct-v0.3"
+served_model_name: "mistral7b"
+max_model_len: 8192
+gpu_memory_utilization: 0.90
+
+extra_args:
+  - "--swap-space"
+  - "16"
+
+env:
+  HUGGING_FACE_HUB_DISABLE_TELEMETRY: "1"
+

@@ -1,0 +1,17 @@
+# C7: Prefix Caching
+# Comparison: Measures impact of prefix caching on repeated prompts
+
+name: C7
+description: "vLLM with prefix caching enabled"
+
+model_id: "mistralai/Mistral-7B-Instruct-v0.3"
+served_model_name: "mistral7b"
+max_model_len: 8192
+gpu_memory_utilization: 0.90
+
+extra_args:
+  - "--enable-prefix-caching"
+
+env:
+  HUGGING_FACE_HUB_DISABLE_TELEMETRY: "1"
+

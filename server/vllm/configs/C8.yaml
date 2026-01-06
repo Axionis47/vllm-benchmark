@@ -1,0 +1,18 @@
+# C8: Multi-step Scheduling
+# Comparison: Measures impact of multi-step scheduling on throughput
+
+name: C8
+description: "vLLM with multi-step scheduling (4 steps)"
+
+model_id: "mistralai/Mistral-7B-Instruct-v0.3"
+served_model_name: "mistral7b"
+max_model_len: 8192
+gpu_memory_utilization: 0.90
+
+extra_args:
+  - "--num-scheduler-steps"
+  - "4"
+
+env:
+  HUGGING_FACE_HUB_DISABLE_TELEMETRY: "1"
+

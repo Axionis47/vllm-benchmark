@@ -1,0 +1,17 @@
+# C2: Chunked Prefill Enabled
+# Comparison: Measures impact of chunked prefill on latency/throughput
+
+name: C2
+description: "vLLM with chunked prefill enabled (--enable-chunked-prefill)"
+
+model_id: "mistralai/Mistral-7B-Instruct-v0.3"
+served_model_name: "mistral7b"
+max_model_len: 8192
+gpu_memory_utilization: 0.90
+
+extra_args:
+  - "--enable-chunked-prefill"
+
+env:
+  HUGGING_FACE_HUB_DISABLE_TELEMETRY: "1"
+
